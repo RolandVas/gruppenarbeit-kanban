@@ -5,12 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets\css\Roland-main.css">
+    <script src="assets\js\Roland-main.js"> </script>
+    <title>Gruppenarbeit</title>
 </head>
 
-<body>
+<body onload="loadTasks()">
+
+
+<div class="bg">
+
+    <div class="nav">
+        <img src="assets\img\logo.png" alt="">
+       <div class="nav-opt">Board</div>
+       <div class="nav-opt">Backlog</div>
+       <div class="nav-opt">Add Task</div> 
+    </div>
+
+    <div class="add-task">
+        <h2>Add Task</h2>
+        <input id="description" placeholder="Aufgabe">
+        <select id="category" placeholder="Kategorie" id="">
+            <option>Marketing</option>
+            <option>Development</option>
+            <option>Design</option>
+        </select>
+        <button onclick="addTask()">Hinzufügen</button>
+
+        <div id="showTasks"></div>
+    </div>
+
+
+    <div id="Backlog" class="backlog d-none">
+        <h2>Backlog</h2>
+    </div>
+
+    <div id="Board" class="board d-none">
+        <h2>Board</h2>
+    </div>
+
+</div>
+
+
 
 </body>
 

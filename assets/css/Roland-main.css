@@ -1,0 +1,49 @@
+body {
+    margin: 0px;
+}
+
+.d-none {
+    display: none;
+}
+
+.bg {
+    display: flex;
+}
+
+.nav {
+    min-height: 90vh;
+    padding: 32px;
+    background-color: grey;
+    
+}
+
+.nav img {
+    margin-bottom: 50px;
+}
+
+.nav-opt {
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-opt:hover {
+    color: white;
+}
+
+.add-task {
+    margin: 16px;
+}
+
+.task {
+    margin: 16px;
+    padding: 24px;
+    background-color: beige;
+    width: 200px;
+}
+
+.deletetask {
+    cursor: pointer;
+    color: red;
+}
