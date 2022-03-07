@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Board</title>
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"rel="stylesheet">
+
+    <script src="board.js"></script>
+    <link rel="stylesheet" href="board.css">
+
 </head>
 
-<body>
+<body onload="updateBoard()">
+
+    <div>NAVBAR</div>
+    <div id="board-container" class="board-container">
+        <div class="statusOfTask">
+            <div class="status" ondragover="allowDrop(event);" ondrop="moveTo('toDo');">
+                <span>TO DO</span>
+                <div class="status-item" id="toDo"></div>
+            </div>
+            <div class="status" ondragover="allowDrop(event);" ondrop="moveTo('inProgress');">
+                <span>IN PROGRESS</span>
+                <div class="status-item" id="inProgress"></div>
+            </div>
+            <div class="status" ondragover="allowDrop(event);" ondrop="moveTo('testing');">
+                <span>TESTING</span>
+                <div class="status-item" id="testing"></div>
+            </div>
+            <div class="status" ondragover="allowDrop(event);" ondrop="moveTo('done');">
+                <span>DONE</span>
+                <div class="status-item" id="done"></div>
+            </div>
+        </div>
+    </div>
 
 </body>
-
 </html>
