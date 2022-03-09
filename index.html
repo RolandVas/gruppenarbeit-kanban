@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets\css\Roland-main.css">
+    <link rel="stylesheet" href="assets/css/add-task.css">
     <script src="assets\js\Roland-main.js"> </script>
     <title>Gruppenarbeit</title>
 </head>
@@ -14,38 +15,82 @@
 <body onload="loadTasks()">
 
 
-<div class="bg">
+    <div class="bg">
 
-    <div class="nav">
-        <img src="assets\img\logo.png" alt="">
-       <div class="nav-opt">Board</div>
-       <div class="nav-opt">Backlog</div>
-       <div class="nav-opt">Add Task</div> 
+        <div class="nav">
+            <img src="assets\img\logo.png" alt="">
+            <div class="nav-opt">Board</div>
+            <div class="nav-opt">Backlog</div>
+            <div class="nav-opt">Add Task</div>
+        </div>
+
+        <div class="add-task">
+            <h2>Add Task</h2>
+
+            <div class="task-container">
+
+                <div class="column">
+                    <div class="column2">
+                        <b>Titel</b>
+                        <input class="input" id="title" placeholder="Titel">
+                    </div>
+                    <div class="column2">
+                        <b>Kategorie</b>
+                        <select class="input" id="category" placeholder="Kategorie" id="">
+                            <option>Marketing</option>
+                            <option>Development</option>
+                            <option>Design</option>
+                        </select>
+                    </div>
+                    <div class="column2">
+                        <b>Beschreibung</b>
+                        <textarea class="input" id="description" cols="30" rows="8" class="text"
+                            required=""></textarea>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="column2">
+                        <b>Bis zu</b>
+                        <input class="input" type="date" name="Date" id="due-date" required="">
+                    </div>
+                    <div class="column2">
+                        <b>Dringlichkeit</b>
+                        <select class="input" id="ungency" placeholder="Dringlichkeit" id="">
+                            <option>Normal</option>
+                            <option>Hoch</option>
+                            <option>Sehr hoch</option>
+                        </select>
+                    </div>
+                    <div class="column2">
+                        <b>Zuteilen an</b>
+                        <select class="input" id="assigned" placeholder="Zuteilen an" id="">
+                            <option>Andrea Böhme</option>
+                            <option>Sebastian Schwill</option>
+                            <option>Roland Vas</option>
+                        </select>
+                    </div>
+
+                    <div class="button">
+                        <button onclick="addTask()">Speichern</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="showTasks"></div>
+        </div>
+
+
+        <div id="Backlog" class="backlog d-none">
+            <h2>Backlog</h2>
+        </div>
+
+        <div id="Board" class="board d-none">
+            <h2>Board</h2>
+        </div>
+
     </div>
-
-    <div class="add-task">
-        <h2>Add Task</h2>
-        <input id="description" placeholder="Aufgabe">
-        <select id="category" placeholder="Kategorie" id="">
-            <option>Marketing</option>
-            <option>Development</option>
-            <option>Design</option>
-        </select>
-        <button onclick="addTask()">Hinzufügen</button>
-
-        <div id="showTasks"></div>
-    </div>
-
-
-    <div id="Backlog" class="backlog d-none">
-        <h2>Backlog</h2>
-    </div>
-
-    <div id="Board" class="board d-none">
-        <h2>Board</h2>
-    </div>
-
-</div>
 
 
 

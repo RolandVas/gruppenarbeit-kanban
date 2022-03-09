@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    font-family: PT Sans, sans-serif;
 }
 
 .d-none {
@@ -11,7 +12,7 @@ body {
 }
 
 .nav {
-    min-height: 90vh;
+    min-height: 100vh;
     padding: 32px;
     background-color: grey;
     
@@ -24,26 +25,10 @@ body {
 .nav-opt {
     margin-bottom: 16px;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
 .nav-opt:hover {
     color: white;
-}
-
-.add-task {
-    margin: 16px;
-}
-
-.task {
-    margin: 16px;
-    padding: 24px;
-    background-color: beige;
-    width: 200px;
-}
-
-.deletetask {
-    cursor: pointer;
-    color: red;
 }
