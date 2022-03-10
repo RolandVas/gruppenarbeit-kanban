@@ -1,7 +1,7 @@
-body {
-    font-family: 'PT Sans', sans-serif;
-    display: flex;
-    align-items: center;
+body {/* TODO kann weg body gibt es in reset.css */
+    font-family: 'PT Sans', sans-serif; /* TODO kann in die reset.css rein*/
+    display: flex;/* TODO das kann weg, wenn du die reset.css einbindest in die board.html kannst du die Klasse flex benutzen. kein/nie doppelten code benutzen wegen wartung*/
+    align-items: center;/* TODO das kann nach reset.css in die Utility class, als .align-Items{align-items: center;} in der board.html als klasse benutzten*/
 }
 
 span {
@@ -11,13 +11,13 @@ span {
 }
 
 .board-container {
-    display: flex;
+    display: flex; /* TODO das ist in der reset.css*/
     height: 100%;
     margin-top: 50px;
     margin-left: 100px;
 }
 
-.statusOfTask {
+.statusOfTask { /*TODO  das kann komplett weg und die Passenden class in reset.css erstellen oder in der board.html benutzen*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,17 +29,17 @@ span {
     padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    text-align: center;
+    text-align: center; /* TODO als klasse in der reset.css in Utility class machen .text-align{text-align: center;}*/
 }
 
 .status-item {
     width: 250px;
-    background-color: #f4f3fb;
+    background-color: #ececec;
     min-height: 600px;
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: flex; /* TODO als klasse benutzen aus reset.css*/
+    align-items: center; /* TODO als klasse benutzen aus reset.css oder erstellen in boarder.html benutzen*/
+    flex-direction: column;/* TODO als klasse benutzen aus reset.css oder erstellen in boarder.html benutzen*/
     margin-top: 20px;
     padding: 10px;
 }
