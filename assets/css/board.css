@@ -1,9 +1,3 @@
-body {/* TODO kann weg body gibt es in reset.css */
-    font-family: 'PT Sans', sans-serif; /* TODO kann in die reset.css rein*/
-    display: flex;/* TODO das kann weg, wenn du die reset.css einbindest in die board.html kannst du die Klasse flex benutzen. kein/nie doppelten code benutzen wegen wartung*/
-    align-items: center;/* TODO das kann nach reset.css in die Utility class, als .align-Items{align-items: center;} in der board.html als klasse benutzten*/
-}
-
 span {
     font-weight: bold;
     font-size: 20px;
@@ -11,16 +5,9 @@ span {
 }
 
 .board-container {
-    display: flex; /* TODO das ist in der reset.css*/
     height: 100%;
     margin-top: 50px;
-    margin-left: 100px;
-}
-
-.statusOfTask { /*TODO  das kann komplett weg und die Passenden class in reset.css erstellen oder in der board.html benutzen*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-left: 200px;
 }
 
 .status {
@@ -29,7 +16,6 @@ span {
     padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    text-align: center; /* TODO als klasse in der reset.css in Utility class machen .text-align{text-align: center;}*/
 }
 
 .status-item {
@@ -37,9 +23,6 @@ span {
     background-color: #ececec;
     min-height: 600px;
     border-radius: 20px;
-    display: flex; /* TODO als klasse benutzen aus reset.css*/
-    align-items: center; /* TODO als klasse benutzen aus reset.css oder erstellen in boarder.html benutzen*/
-    flex-direction: column;/* TODO als klasse benutzen aus reset.css oder erstellen in boarder.html benutzen*/
     margin-top: 20px;
     padding: 10px;
 }
@@ -57,4 +40,87 @@ span {
 
 .drag-area-highlight {
     background-color: rgba(0, 0, 0, 0.2);
+}
+
+.task-items {
+    padding: 10px;
+}
+
+.delete-icon {
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+}
+
+.edit-icon {
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+}
+
+.changeText {
+    position: absolute;
+    top: 168px;
+    left: 450px;
+    width: 320px;
+    height: 215px;
+    border: 1px solid grey;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 200px;
+    border-color: #1e3190;
+    color: #1e3190;
+}
+
+.inputfields input {
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #1e3190;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.inputfields select {
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #1e3190;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.inputfields button {
+    background-color: #f4f3fb;
+    color: #1e3190;
+    height: 25px;
+    width: 75px;
+    border-radius: 12px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 15px;
+    border: 1px solid grey;
+}
+
+.inputfields button:hover {
+    opacity: 0.5;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(assets/img/icons8-calendar-150.png) no-repeat;
+    background-position: center;
+    background-size: 30px;
+    padding-right: 10px;
+    width: 25px;
+    height: 25px;
+    border-width: thin;
+    cursor: pointer;
 }

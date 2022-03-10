@@ -12,31 +12,30 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/board.css">
-    <!-- TODO reset.css implementieren classe durch .flex, align-items,  align-items u.s.w austauschen-->
-
 </head>
 
-<body onload="updateBoard()">
+<body onload="updateBoard(), includeHTML()" class="flex align-items-center">
 
-    <div>NAVBAR</div>
-    <div id="board-container" class="board-container">
-        <div class="statusOfTask">
-            <div class="status" ondragover="allowDrop(event);" ondrop="moveTo('toDo');">
+    <div w3-include-html="nav.html"></div>
+    <div id="board-container" class="board-container flex">
+        <div id="statusOfTask" class="flex align-items-center space-between">
+            <div class="status text-align-center" ondragover="allowDrop(event);" ondrop="moveTo('toDo');">
                 <span>TO DO</span>
-                <div class="status-item" id="toDo"></div>
+                <div class="status-item flex align-items-center flex-direction-column" id="toDo"></div>
             </div>
-            <div class="status" ondragover="allowDrop(event);" ondrop="moveTo('inProgress');">
+            <div class="status text-align-center" ondragover="allowDrop(event);" ondrop="moveTo('inProgress');">
                 <span>IN PROGRESS</span>
-                <div class="status-item" id="inProgress"></div>
+                <div class="status-item flex align-items-center flex-direction-column" id="inProgress"></div>
             </div>
-            <div class="status" ondragover="allowDrop(event);" ondrop="moveTo('testing');">
+            <div class="status text-align-center" ondragover="allowDrop(event);" ondrop="moveTo('testing');">
                 <span>TESTING</span>
-                <div class="status-item" id="testing"></div>
+                <div class="status-item flex align-items-center flex-direction-column" id="testing"></div>
             </div>
-            <div class="status" ondragover="allowDrop(event);" ondrop="moveTo('done');">
+            <div class="status text-align-center" ondragover="allowDrop(event);" ondrop="moveTo('done');">
                 <span>DONE</span>
-                <div class="status-item" id="done"></div>
+                <div class="status-item flex align-items-center flex-direction-column" id="done"></div>
             </div>
         </div>
     </div>

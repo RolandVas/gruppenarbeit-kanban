@@ -27,6 +27,7 @@
 body {
     line-height: 1.5;
     min-height: 100vh;
+    font-family: 'PT Sans', sans-serif;
 }
 
 /* make images easier to work with */
@@ -49,4 +50,20 @@ textarea {
 
 .flex {
     display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.flex-direction-column {
+    flex-direction: column;
 }
