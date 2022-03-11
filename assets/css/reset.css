@@ -3,6 +3,10 @@
 /* -------------------------- */
 :root {
     --clr-main: #1c2d92;
+    --clr-white: white;
+    --clr-grey: grey;
+    --clr-lightgrey: lightgrey;
+    --clr-rgba:rgba(0, 0, 0, 0.2);
 }
 
 /* --------------- */
@@ -42,6 +46,10 @@ input,
 button,
 textarea {
     font: inherit;
+}
+
+ul{
+    list-style-type: none;
 }
 
 /* --------------- */

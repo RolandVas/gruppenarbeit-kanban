@@ -1,7 +1,7 @@
 span {
     font-weight: bold;
     font-size: 20px;
-    color: #1e3190;
+    color: var(--clr-main);
 }
 
 .board-container {
@@ -20,7 +20,7 @@ span {
 
 .status-item {
     width: 250px;
-    background-color: #ececec;
+    background-color: var(--clr-lightgrey);
     min-height: 600px;
     border-radius: 20px;
     margin-top: 20px;
@@ -28,18 +28,18 @@ span {
 }
 
 .tasks {
-    border: 1px solid grey;
-    background-color: white;
+    border: 1px solid var(--clr-grey);
+    background-color: var(--clr-white);
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
     min-width: 200px;
-    border-color: #1e3190;
-    color: #1e3190;
+    border-color: var(--clr-main);
+    color: var(--clr-main);
 }
 
 .drag-area-highlight {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--clr-rgba);
 }
 
 .task-items {
@@ -64,13 +64,13 @@ span {
     left: 450px;
     width: 320px;
     height: 215px;
-    border: 1px solid grey;
-    background-color: white;
+    border: 1px solid var(--clr-grey);
+    background-color: var(--clr-lightgrey);
     border-radius: 10px;
     padding: 10px;
     min-width: 200px;
-    border-color: #1e3190;
-    color: #1e3190;
+    border-color: var(--clr-main);
+    color: var(--clr-main);
 }
 
 .inputfields input {
@@ -79,7 +79,7 @@ span {
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    color: #1e3190;
+    color: var(--clr-main);
     text-align: center;
     margin-top: 5px;
 }
@@ -90,21 +90,21 @@ span {
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    color: #1e3190;
+    color: var(--clr-main);
     text-align: center;
     margin-top: 5px;
 }
 
 .inputfields button {
-    background-color: #f4f3fb;
-    color: #1e3190;
+    background-color: var(--clr-lightgrey);
+    color: var(--clr-main);
     height: 25px;
     width: 75px;
     border-radius: 12px;
     font-size: 13px;
     cursor: pointer;
     margin-top: 15px;
-    border: 1px solid grey;
+    border: 1px solid var(--clr-grey);
 }
 
 .inputfields button:hover {
@@ -112,7 +112,7 @@ span {
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    color: rgba(0, 0, 0, 0);
+    color: var(--clr-rgba);
     opacity: 1;
     display: block;
     background: url(assets/img/icons8-calendar-150.png) no-repeat;
