@@ -47,10 +47,6 @@ button,
 textarea {
     font: inherit;
 }
-/* TODO das kann schon in die nav.css rein*/
-ul {
-    list-style-type: none;
-}
 
 /* --------------- */
 /*  Utility class  */
