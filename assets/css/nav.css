@@ -1,0 +1,45 @@
+.navbar{
+    background-color: var(--clr-main);
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navigation {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 150px;
+}
+
+.navigation a {
+    color: var(--clr-white);
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 0.7;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.navigation a:hover {
+    opacity: 1;
+}
+
+.logo img {
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.navigation-links {
+    margin-top: 80px;
+}
+
+li{
+    margin-top: 30px;
+    margin-right: 25px;
+}
+
+ul {
+    list-style-type: none;
+}

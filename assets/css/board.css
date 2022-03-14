@@ -1,0 +1,126 @@
+span {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--clr-main);
+}
+
+.board-container {
+    height: 100%;
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.status {
+    flex-basis: 100%;
+    flex-grow: 1;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.status-item {
+    width: 250px;
+    background-color: var(--clr-lightgrey);
+    min-height: 600px;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.tasks {
+    border: 1px solid var(--clr-grey);
+    background-color: var(--clr-white);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    min-width: 200px;
+    border-color: var(--clr-main);
+    color: var(--clr-main);
+}
+
+.drag-area-highlight {
+    background-color: var(--clr-rgba);
+}
+
+.task-items {
+    padding: 10px;
+}
+
+.delete-icon {
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+}
+
+.edit-icon {
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+}
+
+.changeText {
+    position: absolute;
+    top: 168px;
+    left: 450px;
+    width: 320px;
+    height: 215px;
+    border: 1px solid var(--clr-grey);
+    background-color: var(--clr-lightgrey);
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 200px;
+    border-color: var(--clr-main);
+    color: var(--clr-main);
+}
+
+.inputfields input {
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--clr-main);
+    text-align: center;
+    margin-top: 5px;
+}
+
+.inputfields select {
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--clr-main);
+    text-align: center;
+    margin-top: 5px;
+}
+
+.inputfields button {
+    background-color: var(--clr-lightgrey);
+    color: var(--clr-main);
+    height: 25px;
+    width: 75px;
+    border-radius: 12px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 15px;
+    border: 1px solid var(--clr-grey);
+}
+
+.inputfields button:hover {
+    opacity: 0.5;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: var(--clr-rgba);
+    opacity: 1;
+    display: block;
+    background: url(assets/img/icons8-calendar-150.png) no-repeat;
+    background-position: center;
+    background-size: 30px;
+    padding-right: 10px;
+    width: 25px;
+    height: 25px;
+    border-width: thin;
+    cursor: pointer;
+}
