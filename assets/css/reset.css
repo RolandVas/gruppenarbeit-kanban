@@ -6,7 +6,7 @@
     --clr-white: white;
     --clr-grey: grey;
     --clr-lightgrey: lightgrey;
-    --clr-rgba:rgba(0, 0, 0, 0.2);
+    --clr-rgba: rgba(0, 0, 0, 0.2);
 }
 
 /* --------------- */
@@ -47,8 +47,8 @@ button,
 textarea {
     font: inherit;
 }
-
-ul{
+/* TODO das kann schon in die nav.css rein*/
+ul {
     list-style-type: none;
 }
 
