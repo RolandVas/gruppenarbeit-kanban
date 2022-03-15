@@ -1,0 +1,9 @@
+h2{
+    margin-top: 50px;
+}
+
+.help-container{
+    margin-top: 100px;
+    margin-left: 250px;
+    color: var(--clr-main);
+}
