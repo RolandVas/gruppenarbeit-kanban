@@ -5,8 +5,6 @@ span {
 }
 
 .board-container {
-    height: 100%;
-    margin-top: 50px;
     margin-left: 200px;
 }
 
@@ -62,15 +60,23 @@ span {
     position: absolute;
     top: 168px;
     left: 450px;
-    width: 320px;
-    height: 215px;
+    width: 450px;
+    height: 350px;
     border: 1px solid var(--clr-grey);
     background-color: var(--clr-lightgrey);
     border-radius: 10px;
+    border-width: 2px;
     padding: 10px;
     min-width: 200px;
     border-color: var(--clr-main);
     color: var(--clr-main);
+}
+
+.inputfields {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    z-index: 1;
 }
 
 .inputfields input {
@@ -81,34 +87,58 @@ span {
     font-size: 16px;
     color: var(--clr-main);
     text-align: center;
-    margin-top: 5px;
+    margin-bottom: 25px;
 }
 
 .inputfields select {
-    width: 150px;
+    width: 250px;
     height: 35px;
     border: none;
     border-radius: 10px;
     font-size: 16px;
     color: var(--clr-main);
     text-align: center;
-    margin-top: 5px;
+    margin-bottom: 25px;
 }
 
-.inputfields button {
-    background-color: var(--clr-lightgrey);
+.change-button {
+    position: absolute;
+    z-index: 1;
+    top: 280px;
+    left: 200px;
+    justify-content: flex-end;
+    text-align: center;
+    background-color: var(--clr-white);
     color: var(--clr-main);
-    height: 25px;
-    width: 75px;
-    border-radius: 12px;
+    height: 32px;
+    width: 55px;
+    padding: 5px;
+    border-radius: 10px;
     font-size: 13px;
     cursor: pointer;
     margin-top: 15px;
-    border: 1px solid var(--clr-grey);
+    border-width: 2px;
+    border: 2px solid var(--clr-main);
+    font-weight: bold;
 }
 
-.inputfields button:hover {
-    opacity: 0.5;
+.close-button{
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 400px;
+    justify-content: flex-end;
+    text-align: center;
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    height: 25px;
+    width: 25px;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    border-width: 2px;
+    border: 2px solid var(--clr-main);
+    font-weight: bold;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {

@@ -113,19 +113,25 @@ function deleteTask(id) {
 function editTask(id) {
     let index = tasks.findIndex(t => t.id == id);
     document.getElementById('board-container').innerHTML += `
-                    <div id="changeText" class="changeText">
-                        <div class="inputfields flex align-items-center flex-direction-column">
-                            <input minlength="2" maxlength="25" id="Title_${tasks[index]['title']}" type="text" placeholder="Title">
-                            <select id="category_${tasks[index]['category']}">
-                                <option>Marketing</option>
-                                <option>Product</option>
-                                <option>Sales</option>
-                            </select>
-                            <input minlength="2" maxlength="25" id="AssignedTo_${tasks[index]['assignedTo']}" type="text" placeholder="Assigned To">
-                            <input type="date" name="" id="DueDate_${tasks[index]['dueDate']}">
-                            <button onclick="changeInput('${id}','${index}','Title_${tasks[index]['title']}','category_${tasks[index]['category']}','${tasks[index]['status']}','AssignedTo_${tasks[index]['assignedTo']}', 'DueDate_${tasks[index]['dueDate']}')">Change</button>
+                        <div id="changeText" class="changeText">
+                         
+                                <div class="close-button" onclick="closeOpenTask()">x</div> 
+                         
+                            <div class="inputfields">
+                                <input minlength="2" maxlength="25" id="Title_${tasks[index]['title']}" type="text" placeholder="Title">
+                                <select id="category_${tasks[index]['category']}">
+                                    <option>Marketing</option>
+                                    <option>Product</option>
+                                    <option>Sales</option>
+                                </select>
+                                <input minlength="2" maxlength="25" id="AssignedTo_${tasks[index]['assignedTo']}" type="text" placeholder="Assigned To">
+                                <input type="date" name="" id="DueDate_${tasks[index]['dueDate']}">
+                            </div>
+                        
+                                <div class="change-button" onclick="changeInput('${id}','${index}','Title_${tasks[index]['title']}','category_${tasks[index]['category']}','${tasks[index]['status']}','AssignedTo_${tasks[index]['assignedTo']}', 'DueDate_${tasks[index]['dueDate']}')">Change</div>
+                     
                         </div>
-                    </div>`;
+                    `;
     document.getElementById(`Title_${tasks[index]['title']}`).value = tasks[index]['title'];
     document.getElementById(`category_${tasks[index]['category']}`).value = tasks[index]['category'];
     document.getElementById(`AssignedTo_${tasks[index]['assignedTo']}`).value = tasks[index]['assignedTo'];
@@ -150,6 +156,10 @@ function changeInput(i, index, indexOfTitle, indexOfCategory, status, indexOfAss
     }
     tasks.splice(index, 1, task);
     updateBoard();
+    document.getElementById('changeText').remove();
+}
+
+function closeOpenTask() {
     document.getElementById('changeText').remove();
 }
 
