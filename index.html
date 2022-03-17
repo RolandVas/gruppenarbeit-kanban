@@ -6,25 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets\css\Roland-main.css">
+    <link rel="stylesheet" href="assets/css/Roland-main.css">
     <link rel="stylesheet" href="assets/css/add-task.css">
-    <script src="assets\js\Roland-main.js"> </script>
+    <script src="assets/js/Roland-main.js"> </script>
+    <script src="assets/js/mini_backend.js"></script>
+    <script>setURL('http://gruppe-186.developerakademie.net/smallest_backend_ever');</script>
     <title>Gruppenarbeit</title>
 </head>
 
-<body onload="loadTasks()">
-
-
+<body onload="init(), loadTasks()">
     <div class="bg">
 
         <div class="nav">
-            <img src="assets\img\logo.png" alt="">
+            <img src="assets\img\logo.png">
             <div class="nav-opt">Board</div>
             <div class="nav-opt">Backlog</div>
             <div class="nav-opt">Add Task</div>
         </div>
 
         <div class="add-task">
+
             <h2>Add Task</h2>
 
             <div class="task-container">
@@ -44,8 +45,7 @@
                     </div>
                     <div class="column2">
                         <b>Beschreibung</b>
-                        <textarea class="input" id="description" cols="30" rows="8" class="text"
-                            required=""></textarea>
+                        <textarea class="input" id="description" cols="30" rows="8" class="text" required=""></textarea>
                     </div>
                 </div>
 
@@ -70,28 +70,17 @@
                             <option>Roland Vas</option>
                         </select>
                     </div>
-
                     <div class="button">
                         <button onclick="addTask()">Speichern</button>
                     </div>
                 </div>
+                
             </div>
 
-
             <div id="showTasks"></div>
+
         </div>
-
-
-        <div id="Backlog" class="backlog d-none">
-            <h2>Backlog</h2>
-        </div>
-
-        <div id="Board" class="board d-none">
-            <h2>Board</h2>
-        </div>
-
     </div>
-
 
 
 </body>

@@ -1,3 +1,8 @@
+async function init() {
+    await downloadFromServer();
+    allTasks = JSON.parse(backend.getItem('allTasks')) || [];
+}
+
 /* Aktueller Zeit und Datum */
 let today = new Date();
 let time = ('0' + today.getHours()).slice(-2) + ':' + ('0' + today.getMinutes()).slice(-2);
@@ -25,12 +30,9 @@ function addTask() {
         'due-date': due_date,
         'ungency': ungency,
         'assigned': assigned
-
     }
+
     allTasks.push(task)
-
-    console.log('Task:', allTasks);
-
 
     save();
     loadTasks();
@@ -39,18 +41,17 @@ function addTask() {
 
 
 /* allTasks wird im localStorage gespeichert bwz. aktualisiert */
-function save() {
+async function save() {
     let allTasksAsString = JSON.stringify(allTasks);
-    localStorage.setItem('allTasks', allTasksAsString)
+    await backend.setItem('allTasks', allTasksAsString)
+    console.log('saved to backend');
 }
 
 
 /* alle gespeicherte Werte aus dem localStorage werden abgerufen und ald Ticket dargestellt */
 function loadTasks() {
-    let allTasksAsString = localStorage.getItem('allTasks');
-    allTasks = JSON.parse(allTasksAsString);
 
-    document.getElementById('showTasks').innerHTML ='';
+    document.getElementById('showTasks').innerHTML = '';
     for (let i = 0; i < allTasks.length; i++) {
         const element = allTasks[i];
         document.getElementById('showTasks').innerHTML += `
@@ -66,7 +67,6 @@ function loadTasks() {
     </div>
     `;
     }
-    
 }
 
 
@@ -76,5 +76,9 @@ function deleteTask(i) {
 
     save();
     loadTasks();
+}
+
+function deleteUser(name) {
+    backend.deleteItem('users');
 }
 
