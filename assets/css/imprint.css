@@ -1,0 +1,9 @@
+h1{
+    margin-bottom: 20px;
+}
+
+.imprint-container{
+    margin-top: 100px;
+    margin-left: 250px;
+    color: var(--clr-main);
+}
