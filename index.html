@@ -5,84 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/Roland-main.css">
-    <link rel="stylesheet" href="assets/css/add-task.css">
-    <script src="assets/js/Roland-main.js"> </script>
-    <script src="assets/js/mini_backend.js"></script>
-    <script>setURL('http://gruppe-186.developerakademie.net/smallest_backend_ever');</script>
-    <title>Gruppenarbeit</title>
+    <title>Board</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/board.css">
 </head>
 
-<body onload="init(), loadTasks()">
-    <div class="bg">
+<body onload="updateBoard(), includeHTML()" class="flex align-items-center">
 
-        <div class="nav">
-            <img src="assets\img\logo.png">
-            <div class="nav-opt">Board</div>
-            <div class="nav-opt">Backlog</div>
-            <div class="nav-opt">Add Task</div>
-        </div>
-
-        <div class="add-task">
-
-            <h2>Add Task</h2>
-
-            <div class="task-container">
-
-                <div class="column">
-                    <div class="column2">
-                        <b>Titel</b>
-                        <input class="input" id="title" placeholder="Titel">
-                    </div>
-                    <div class="column2">
-                        <b>Kategorie</b>
-                        <select class="input" id="category" placeholder="Kategorie" id="">
-                            <option>Marketing</option>
-                            <option>Development</option>
-                            <option>Design</option>
-                        </select>
-                    </div>
-                    <div class="column2">
-                        <b>Beschreibung</b>
-                        <textarea class="input" id="description" cols="30" rows="8" class="text" required=""></textarea>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="column2">
-                        <b>Bis zu</b>
-                        <input class="input" type="date" name="Date" id="due-date" required="">
-                    </div>
-                    <div class="column2">
-                        <b>Dringlichkeit</b>
-                        <select class="input" id="ungency" placeholder="Dringlichkeit" id="">
-                            <option>Normal</option>
-                            <option>Hoch</option>
-                            <option>Sehr hoch</option>
-                        </select>
-                    </div>
-                    <div class="column2">
-                        <b>Zuteilen an</b>
-                        <select class="input" id="assigned" placeholder="Zuteilen an" id="">
-                            <option>Andrea Böhme</option>
-                            <option>Sebastian Schwill</option>
-                            <option>Roland Vas</option>
-                        </select>
-                    </div>
-                    <div class="button">
-                        <button onclick="addTask()">Speichern</button>
-                    </div>
-                </div>
-                
+    <div w3-include-html="../views/nav.html"></div>
+    <div id="board-container" class="board-container flex">
+        <div id="statusOfTask" class="flex align-items-center space-between">
+            <div class="status text-align-center" ondragover="allowDrop(event);" ondrop="moveTo('toDo');">
+                <span>TO DO</span>
+                <div class="status-item flex align-items-center flex-direction-column" id="toDo"></div>
             </div>
-
-            <div id="showTasks"></div>
-
+            <div class="status text-align-center" ondragover="allowDrop(event);" ondrop="moveTo('inProgress');">
+                <span>IN PROGRESS</span>
+                <div class="status-item flex align-items-center flex-direction-column" id="inProgress"></div>
+            </div>
+            <div class="status text-align-center" ondragover="allowDrop(event);" ondrop="moveTo('testing');">
+                <span>TESTING</span>
+                <div class="status-item flex align-items-center flex-direction-column" id="testing"></div>
+            </div>
+            <div class="status text-align-center" ondragover="allowDrop(event);" ondrop="moveTo('done');">
+                <span>DONE</span>
+                <div class="status-item flex align-items-center flex-direction-column" id="done"></div>
+            </div>
         </div>
     </div>
 
-
 </body>
+
+<script src="../assets/js/board.js"></script>
 
 </html>
