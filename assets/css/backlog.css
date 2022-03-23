@@ -1,0 +1,10 @@
+.backlog-task-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    margin-left: 300px;
+    margin-right: 200px;
+    font-size: 12px;
+}
