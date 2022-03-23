@@ -1,0 +1,36 @@
+body {
+    margin: 0px;
+    font-family: PT Sans, sans-serif;
+}
+
+.d-none {
+    display: none;
+}
+
+.bg {
+    display: flex;
+}
+
+.nav {
+    min-height: 100vh;
+    padding: 32px;
+    background-color: grey;
+    
+}
+
+.nav img {
+    margin-bottom: 50px;
+    height: 70px;
+    width: 60px;
+}
+
+.nav-opt {
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav-opt:hover {
+    color: white;
+}

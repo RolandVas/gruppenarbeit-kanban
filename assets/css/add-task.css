@@ -1,0 +1,79 @@
+
+.add-task {
+    margin: 16px;
+    margin-left: 200px;
+}
+
+.add-task h2 {
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+.task {
+    margin: 16px;
+    padding: 24px;
+    background-color: beige;
+}
+
+.deletetask {
+    cursor: pointer;
+    color: red;
+}
+
+
+.task-container {
+    background-color: rgb(238,242,255);
+    display: flex;
+    padding: 18px;
+    width: 700px;
+    border-radius: 15px;
+}
+
+
+
+.input {
+    padding: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: rgba(0, 0, 0, 0.8);
+    
+}
+
+
+.column {
+    display: block;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.column2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 18px;
+    
+}
+
+.button {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding: 18px;
+}
+
+.button button {
+    border: none;
+    background-color: #1f1fa0;
+    width: 100px;
+    height: 45px;
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+    font-family: 'PT Sans', sans-serif;
+    cursor: pointer;
+}
+
+.button button:hover {
+    background-color: #4343e7;
+}
