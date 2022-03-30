@@ -10,6 +10,9 @@ let allTasks = [];
 
 /* Wenn man auf dem Button Hinzufügen drückt werden alle eingegebene Werte ausgelesen und im Array allTasks gespeichert */
 function addTask() {
+    // var data = new FormData(document.getElementById("form"));
+    // fetch("SERVER-SCRIPT", { method: "post", body: data });
+
     let title = document.getElementById('title').value;
     let category = document.getElementById('category').value;
     let description = document.getElementById('description').value;
@@ -35,13 +38,22 @@ function addTask() {
 
     save();
     clearInput();
+    document.getElementById('Save').innerHTML += `
+    <div class="task">
+    Die Aufgabe wurde erfolgreich gespeichert!
+    </div>`
+
+    
 }
 
 function clearInput() {
     title.value = '';
     category.value = '';
     description.value = '';
-    due_date.value = '';
+    // due_date.value = '';
+    document.getElementById('due-date').value = '';
     ungency.value = '';
     assigned.value = '';
 }
+
+

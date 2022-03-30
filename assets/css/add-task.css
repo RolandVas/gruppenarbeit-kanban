@@ -10,9 +10,9 @@
 }
 
 .task {
-    margin: 16px;
-    padding: 24px;
+    padding: 16px;
     background-color: beige;
+    text-align: center;
 }
 
 .deletetask {

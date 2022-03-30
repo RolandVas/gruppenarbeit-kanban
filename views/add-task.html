@@ -28,16 +28,17 @@
 
             <h2>Add Task</h2>
 
-            <div class="task-container">
+            <form onsubmit="addTask(); return false" class="task-container">
 
                 <div class="column">
                     <div class="column2">
                         <b>Titel</b>
-                        <input class="input" id="title" placeholder="Titel">
+                        <input type="text" class="input" id="title" placeholder="Titel" required>
                     </div>
                     <div class="column2">
                         <b>Kategorie</b>
-                        <select class="input" id="category" placeholder="Kategorie" id="">
+                        <select class="input" id="category" placeholder="Kategorie" required>
+                            <option disabled selected></option>
                             <option>Marketing</option>
                             <option>Development</option>
                             <option>Design</option>
@@ -45,18 +46,19 @@
                     </div>
                     <div class="column2">
                         <b>Beschreibung</b>
-                        <textarea class="input" id="description" cols="30" rows="8" class="text" required=""></textarea>
+                        <textarea class="input" id="description" cols="30" rows="8" class="text" required></textarea>
                     </div>
                 </div>
 
                 <div class="column">
                     <div class="column2">
                         <b>Bis zu</b>
-                        <input class="input" type="date" name="Date" id="due-date" required="">
+                        <input class="input" type="date" name="Date" id="due-date" required>
                     </div>
                     <div class="column2">
                         <b>Dringlichkeit</b>
-                        <select class="input" id="ungency" placeholder="Dringlichkeit" id="">
+                        <select class="input" id="ungency" placeholder="Dringlichkeit" required>
+                            <option disabled selected></option>
                             <option>Normal</option>
                             <option>Hoch</option>
                             <option>Sehr hoch</option>
@@ -64,20 +66,22 @@
                     </div>
                     <div class="column2">
                         <b>Zuteilen an</b>
-                        <select class="input" id="assigned" placeholder="Zuteilen an" id="">
+                        <select class="input" id="assigned" placeholder="Zuteilen an" required>
+                            <option disabled selected></option>
                             <option>Andrea Böhme</option>
                             <option>Sebastian Schwill</option>
                             <option>Roland Vas</option>
                         </select>
                     </div>
                     <div class="button">
-                        <button type="submit" onclick="addTask()">In Backlog speichern</button>
+                        <button type="submit">In Backlog speichern</button>
                     </div>
+                    <div id="Save"></div>
                 </div>
+                
+            </form>
 
-            </div>
-
-            <div></div>
+            
 
         </div>
     </div>
