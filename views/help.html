@@ -14,10 +14,20 @@
 
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/help.css">
+
+    <script src="../assets/js/add-task.js"> </script>
+    <script src="../assets/js/main.js"> </script>
+    <script src="../assets/js/mini_backend.js"></script>
+    <script src="../assets/js/board.js"> </script>
+    <script src="../assets/js/backlog.js"> </script>
+    <script src="../assets/js/help.js"> </script>
+    <script src="../assets/js/imprint.js"> </script>
+    <script>setURL('http://gruppe-186.developerakademie.net/smallest_backend_ever');</script>
 </head>
 
 <body onload="includeHTML()">
-    <div w3-include-html="nav.html"></div>
+
+    <div w3-include-html="../views/nav.html"></div>
     <div class="help-container">
         <h1>Wellcome to Join</h1>
 
@@ -38,9 +48,9 @@
         <p>In the section tasks you can define your tasks. Information such as title, description, category and
             assignment</p>
     </div>
-<!-- TODO script kommt aus dem body raus -->
-    <script src="../assets/js/help.js"></script>
-
+    
 </body>
+
+
 
 </html>

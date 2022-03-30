@@ -1,0 +1,46 @@
+.backlog-task-container{
+    background-color: rgba(128, 128, 128, 0.171);
+    border-radius: 15px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.backlog-container {
+    margin: 16px;
+    margin-left: 200px;
+    
+}
+
+.backlog-container h2 {
+    color: darkblue;
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-head{
+    color: darkblue;
+    font-size: 20px;
+    text-align: left;    
+}
+
+
+.table-content {
+    background-color: rgb(238,242,255);
+    text-align: left; 
+    font-size: 16px;
+}
+
+th {
+    padding: 8px;
+}

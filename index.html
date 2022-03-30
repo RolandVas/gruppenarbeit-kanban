@@ -5,12 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="">
+    <title>Kanban</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/board.css">
+
+    <script src="../assets/js/mini_backend.js"></script>
+    <script src="../assets/js/board.js"> </script>
+    <script src="../assets/js/main.js"> </script>
+    <script src="../assets/js/backlog.js"> </script>
+    <script src="../assets/js/add-task.js"> </script>
+    <script>setURL('http://gruppe-186.developerakademie.net/smallest_backend_ever');</script>
+
 </head>
 
-<body>
+<body onload="initBoard(), includeHTML()" class="flex align-items-center">
+
+    <div w3-include-html="../views/nav.html"></div>
+    <div id="board-container" class="board-container flex">
+        <div id="statusOfTask" class="flex align-items-center space-between">
+            <div class="status text-align-center" ondragover="allowDrop(event);" ondrop="moveTo('toDo');">
+                <span>TO DO</span>
+                <div class="status-item flex align-items-center flex-direction-column" id="toDo"></div>
+            </div>
+            <div class="status text-align-center" ondragover="allowDrop(event);" ondrop="moveTo('inProgress');">
+                <span>IN PROGRESS</span>
+                <div class="status-item flex align-items-center flex-direction-column" id="inProgress"></div>
+            </div>
+            <div class="status text-align-center" ondragover="allowDrop(event);" ondrop="moveTo('testing');">
+                <span>TESTING</span>
+                <div class="status-item flex align-items-center flex-direction-column" id="testing"></div>
+            </div>
+            <div class="status text-align-center" ondragover="allowDrop(event);" ondrop="moveTo('done');">
+                <span>DONE</span>
+                <div class="status-item flex align-items-center flex-direction-column" id="done"></div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
