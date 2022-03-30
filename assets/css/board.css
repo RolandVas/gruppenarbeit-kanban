@@ -18,7 +18,7 @@ span {
 
 .status-item {
     width: 250px;
-    background-color: var(--clr-lightgrey);
+    background-color: rgb(238,242,255);
     min-height: 600px;
     border-radius: 20px;
     margin-top: 20px;
@@ -63,7 +63,7 @@ span {
     width: 450px;
     height: 350px;
     border: 1px solid var(--clr-grey);
-    background-color: var(--clr-lightgrey);
+    background-color: rgb(238,242,255);
     border-radius: 10px;
     border-width: 2px;
     padding: 10px;

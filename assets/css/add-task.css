@@ -1,7 +1,7 @@
-
 .add-task {
     margin: 16px;
     margin-left: 200px;
+    color: var(--clr-main);
 }
 
 .add-task h2 {
@@ -10,9 +10,9 @@
 }
 
 .task {
-    margin: 16px;
-    padding: 24px;
+    padding: 16px;
     background-color: beige;
+    text-align: center;
 }
 
 .deletetask {
@@ -64,9 +64,9 @@
 
 .button button {
     border: none;
-    background-color: #1f1fa0;
+    background-color: var(--clr-main);
     width: 100px;
-    height: 45px;
+    height: 65px;
     color: white;
     border-radius: 8px;
     padding: 8px;

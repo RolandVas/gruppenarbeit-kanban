@@ -5,42 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
     <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/Roland-main.css">
     <link rel="stylesheet" href="../assets/css/add-task.css">
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/board.css">
 
-
-    <script src="../assets/js/imprint.js"> </script>
-    <script src="../assets/js/board.js"> </script>
-    <script src="../assets/js/help.js"> </script>
-    <script src="../assets/js/Roland-main.js"> </script>
     <script src="../assets/js/mini_backend.js"></script>
+    <script src="../assets/js/main.js"> </script>
+    <script src="../assets/js/backlog.js"> </script>
+    <script src="../assets/js/add-task.js"> </script>
+    <script src="../assets/js/board.js"> </script>
     <script>setURL('http://gruppe-186.developerakademie.net/smallest_backend_ever');</script>
 
     <title>Gruppenarbeit</title>
 </head>
 
-<body onload="init(), loadTasks(), includeHTML()">
+<body onload="loadTasks(), includeHTML()">
     <div class="bg">
 
-        <div w3-include-html="nav.html"></div>
+        <div w3-include-html="../views/nav.html"></div>
 
         <div class="add-task">
 
             <h2>Add Task</h2>
 
-            <div class="task-container">
+            <form onsubmit="addTask(); return false" class="task-container">
 
                 <div class="column">
                     <div class="column2">
                         <b>Titel</b>
-                        <input class="input" id="title" placeholder="Titel">
+                        <input type="text" class="input" id="title" placeholder="Titel" required>
                     </div>
                     <div class="column2">
                         <b>Kategorie</b>
-                        <select class="input" id="category" placeholder="Kategorie" id="">
+                        <select class="input" id="category" placeholder="Kategorie" required>
+                            <option disabled selected></option>
                             <option>Marketing</option>
                             <option>Development</option>
                             <option>Design</option>
@@ -48,18 +46,19 @@
                     </div>
                     <div class="column2">
                         <b>Beschreibung</b>
-                        <textarea class="input" id="description" cols="30" rows="8" class="text" required=""></textarea>
+                        <textarea class="input" id="description" cols="30" rows="8" class="text" required></textarea>
                     </div>
                 </div>
 
                 <div class="column">
                     <div class="column2">
                         <b>Bis zu</b>
-                        <input class="input" type="date" name="Date" id="due-date" required="">
+                        <input class="input" type="date" name="Date" id="due-date" required>
                     </div>
                     <div class="column2">
                         <b>Dringlichkeit</b>
-                        <select class="input" id="ungency" placeholder="Dringlichkeit" id="">
+                        <select class="input" id="ungency" placeholder="Dringlichkeit" required>
+                            <option disabled selected></option>
                             <option>Normal</option>
                             <option>Hoch</option>
                             <option>Sehr hoch</option>
@@ -67,20 +66,22 @@
                     </div>
                     <div class="column2">
                         <b>Zuteilen an</b>
-                        <select class="input" id="assigned" placeholder="Zuteilen an" id="">
+                        <select class="input" id="assigned" placeholder="Zuteilen an" required>
+                            <option disabled selected></option>
                             <option>Andrea Böhme</option>
                             <option>Sebastian Schwill</option>
                             <option>Roland Vas</option>
                         </select>
                     </div>
                     <div class="button">
-                        <button onclick="addTask()">Speichern</button>
+                        <button type="submit">In Backlog speichern</button>
                     </div>
+                    <div id="Save"></div>
                 </div>
+                
+            </form>
 
-            </div>
-
-            <div id="showTasks"></div>
+            
 
         </div>
     </div>
