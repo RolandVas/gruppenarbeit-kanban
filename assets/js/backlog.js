@@ -57,22 +57,3 @@ function deleteTaskFromJson(id) {
     save();
     checkStatus();
 };
-
-
-
-
-
-
-
-
-{/* <div id="task${i}">
-<div class="backlog-task-container">
-    <div>${backlog[i]['title']}</div>
-    <div>${backlog[i]['category']}</div>
-    <div>${backlog[i]['ungency']}</div>
-</div>
-<div> 
-    <button onclick="addTaskToTodo(${backlog[i]['id']})">In Board (TO DO)</button> 
-    <button onclick="deleteTaskFromJson(${backlog[i]['id']})">Löschen</button> 
-</div>
-</div>  */}
