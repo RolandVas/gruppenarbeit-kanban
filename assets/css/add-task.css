@@ -12,15 +12,22 @@
 
 .task {
     padding: 16px;
-    background-color: beige;
+    background-color: rgb(11, 201, 235);
     text-align: center;
+    color: white;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.hide-task {
+    padding: none;
+    background-color: rgb(238,242,255);
 }
 
 .deletetask {
     cursor: pointer;
     color: red;
 }
-
 
 .task-container {
     background-color: rgb(238,242,255);
@@ -30,17 +37,13 @@
     border-radius: 15px;
 }
 
-
-
 .input {
     max-width: 100%;
     padding: 6px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    color: rgba(0, 0, 0, 0.8);
-    
+    color: rgba(0, 0, 0, 0.8); 
 }
-
 
 .column {
     display: block;
@@ -55,7 +58,6 @@
     justify-content: center;
     flex-direction: column;
     padding: 18px;
-    
 }
 
 .button {

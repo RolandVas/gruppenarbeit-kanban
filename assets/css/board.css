@@ -58,25 +58,33 @@ span {
 
 .changeText {
     position: absolute;
-    top: 168px;
+    top: 50px;
     left: 450px;
-    width: 450px;
-    height: 350px;
+    width: 550px;
+    height: 700px;
     border: 1px solid var(--clr-grey);
-    background-color: rgb(238,242,255);
+    background-color: var(--clr-main);
     border-radius: 10px;
     border-width: 2px;
     padding: 10px;
     min-width: 200px;
     border-color: var(--clr-main);
-    color: var(--clr-main);
+    color: var(--clr-white);
+}
+
+.white-text{
+    color: white;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
 }
 
 .inputfields {
     position: absolute;
     top: 50px;
-    left: 100px;
+    left: 50px;
     z-index: 1;
+    color: var(--clr-main);
 }
 
 .inputfields input {
@@ -86,8 +94,9 @@ span {
     border-radius: 10px;
     font-size: 16px;
     color: var(--clr-main);
-    text-align: center;
     margin-bottom: 25px;
+    margin-left: 5px;
+    padding: 5px;
 }
 
 .inputfields select {
@@ -97,24 +106,35 @@ span {
     border-radius: 10px;
     font-size: 16px;
     color: var(--clr-main);
-    text-align: center;
     margin-bottom: 25px;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.inputfields textarea {
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--clr-main);
+    margin-bottom: 25px;
+    margin-left: 5px;
+    padding: 5px;
 }
 
 .change-button {
     position: absolute;
     z-index: 1;
-    top: 280px;
-    left: 200px;
+    top: 600px;
+    left: 250px;
     justify-content: flex-end;
+    align-items: center;
     text-align: center;
     background-color: var(--clr-white);
     color: var(--clr-main);
-    height: 32px;
-    width: 55px;
+    height: 40px;
+    width: 80px;
     padding: 5px;
     border-radius: 10px;
-    font-size: 13px;
+    font-size: 20px;
     cursor: pointer;
     margin-top: 15px;
     border-width: 2px;
@@ -126,7 +146,7 @@ span {
     position: absolute;
     z-index: 1;
     top: 10px;
-    left: 400px;
+    left: 500px;
     justify-content: flex-end;
     text-align: center;
     background-color: var(--clr-white);
@@ -145,7 +165,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: var(--clr-rgba);
     opacity: 1;
     display: block;
-    background: url(assets/img/icons8-calendar-150.png) no-repeat;
     background-position: center;
     background-size: 30px;
     padding-right: 10px;
@@ -153,4 +172,5 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 25px;
     border-width: thin;
     cursor: pointer;
+    color: rgba(0, 0, 0, 0.8);
 }

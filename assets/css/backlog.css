@@ -38,7 +38,6 @@ button:hover {
     margin-top: 32px;
 }
 
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -49,7 +48,6 @@ table {
     font-size: 20px;
     text-align: left;    
 }
-
 
 .table-content {
     background-color: rgb(238,242,255);
@@ -74,7 +72,6 @@ td:hover {
     white-space: normal;
     word-break: break-all;
 }
-
 
 td:nth-child(7) {
     text-align: end;

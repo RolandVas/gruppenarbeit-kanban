@@ -1,3 +1,7 @@
+/**
+ * This function is to include the navigation bar in all sheets of the Kanban
+ * 
+ */
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
     z = document.getElementsByTagName("*");
@@ -39,26 +43,3 @@ async function loadTasks() {
     allTasks = JSON.parse(backend.getItem('allTasks')) || [];
     backlog = JSON.parse(backend.getItem('backlog')) || [];
 };
-
-
-/* alle gespeicherte Werte aus dem localStorage werden abgerufen und ald Ticket dargestellt
-function loadTasks() {
-    document.getElementById('showTasks').innerHTML = '';
-    for (let i = 0; i < allTasks.length; i++) {
-        const element = allTasks[i];
-        document.getElementById('showTasks').innerHTML += `
-    <div class="task">
-        <div><b>Titel:</b> ${element['title']}</div>
-        <div><b>Kategorie:</b> ${element['category']}</div>
-        <div><b>Erstellt am:</b> ${element['createdTime']} ${element['createdDate']}</div>
-        <div><b>Beschreibung:</b> ${element['description']}</div>
-        <div><b>Bis zu</b> ${element['due-date']} <b>erledigen</b></div>
-        <div><b>Dringlichkeit:</b> ${element['ungency']}</div>
-        <div><b>Zugeteilt für:</b> ${element['assigned']}</div>
-        <div class="deletetask" onclick=deleteTask(${i})>Delete</div>
-    </div>
-    `;
-    }
-}
-
-*/
