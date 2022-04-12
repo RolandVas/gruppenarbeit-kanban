@@ -40,7 +40,7 @@ function addTask() {
     </div>`
     setTimeout
     setTimeout(() => {document.getElementById('Save').innerHTML = `
-    <div class="hide-task"></div>`}, 4000);
+    <div class="hide-task"></div>`}, 3000);
 }
 
 /**

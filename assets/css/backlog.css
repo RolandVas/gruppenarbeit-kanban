@@ -93,3 +93,35 @@ tr:nth-child(even){
 .yellow {
     border-left: solid 4px #E9D758;
 }
+
+@media(max-width: 1045px) {
+    
+    .backlog-container {
+        margin: 16px;
+        margin-left: 180px;
+        margin-right: 45px;
+    }
+
+    .table-head{
+        font-size: 16px;  
+    }
+    
+    .table-content {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 890px) {
+    
+    .backlog-container {
+        margin-left: 150px;
+        margin-right: 35px;
+    }
+}
+
+@media(max-width: 625px) {
+    
+    .backlog-container {
+        margin-left: 20px !important;
+    }
+}

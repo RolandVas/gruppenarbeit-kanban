@@ -8,6 +8,12 @@ span {
     margin-left: 200px;
 }
 
+.statusOfTask {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .status {
     flex-basis: 100%;
     flex-grow: 1;
@@ -173,4 +179,148 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-width: thin;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.8);
+}
+
+@media(max-width: 1200px) {
+    .board-container {
+        margin-left: 160px;
+    }
+    
+    .status {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    
+    .status-item {
+        width: 230px;
+    }
+}
+
+@media(max-width: 1170px) {
+    .board-container {
+        margin-left: 160px;
+    }
+    
+    .status {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .status-item {
+        width: 210px;
+    }
+
+    .tasks {
+        padding: 5px;
+        margin: 5px;
+        min-width: 180px;
+    }
+
+    .delete-icon {
+        height: 10px;
+        width: 10px;
+    }
+    
+    .edit-icon {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media(max-width: 1100px) {
+    .board-container {
+        margin-left: 150px;
+    }
+    
+    .status-item {
+        width: 200px;
+    }
+
+    .tasks {
+        min-width: 160px;
+        font-size: 12px;
+    }
+
+}
+
+@media(max-width: 1080px) {
+    .board-container {
+        margin-left: 150px;
+    }
+    
+    .status-item {
+        width: 180px;
+    }
+
+    .tasks {
+        min-width: 140px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 960px) {
+    .board-container {
+        margin-left: 150px;
+    }
+    
+    .status-item {
+        width: 160px;
+    }
+
+    .tasks {
+        min-width: 140px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 860px) {
+    .board-container {
+        margin-left: 150px;
+    }
+    
+    .status-item {
+        width: 140px;
+    }
+
+    .tasks {
+        min-width: 130px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 780px) {
+    
+    .statusOfTask {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .status-item {
+        width: 550px;
+        min-height: 300px;
+    }
+}
+
+@media(max-width: 715px) {
+    
+    .status-item {
+        width: 500px;
+        min-height: 250px;
+    }
+}
+
+@media(max-width: 660px) {
+    
+    .status-item {
+        width: 450px;
+        min-height: 200px;
+    }
+}
+
+@media(max-width: 625px) {
+    
+    .board-container {
+        margin-left: 20px !important;
+    }
 }
