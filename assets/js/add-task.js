@@ -1,14 +1,13 @@
-
-/* Aktueller Zeit und Datum */
 let today = new Date();
 let time = ('0' + today.getHours()).slice(-2) + ':' + ('0' + today.getMinutes()).slice(-2);
 let date = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
 
-
 let allTasks = [];
 
-
-/* Wenn man auf dem Button Hinzufügen drückt werden alle eingegebene Werte ausgelesen und im Array allTasks gespeichert */
+/**
+ * This function is to add new tasks to Kanban. Press the button and the task with the inserted data will be saved in the Array "allTasks"
+ * 
+ */
 function addTask() {
     let title = document.getElementById('title').value;
     let category = document.getElementById('category').value;
@@ -23,9 +22,9 @@ function addTask() {
         'status': status,
         'title': title,
         'category': category,
+        'description': description,
         'createdTime': time,
         'createdDate': date,
-        'description': description,
         'due-date': due_date,
         'ungency': ungency,
         'assigned': assigned
@@ -39,9 +38,15 @@ function addTask() {
     <div class="task">
     Die Aufgabe wurde erfolgreich gespeichert!
     </div>`
+    setTimeout
+    setTimeout(() => {document.getElementById('Save').innerHTML = `
+    <div class="hide-task"></div>`}, 3000);
 }
 
-/* Leert alle Eingabefeldern */
+/**
+ * This function is to clear inputfields so new task can be added"
+ * 
+ */
 function clearInput() {
     title.value = '';
     category.value = '';
