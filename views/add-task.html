@@ -37,8 +37,8 @@
                     </div>
                     <div class="column2">
                         <b>Kategorie</b>
-                        <select class="input" id="category" placeholder="Kategorie" required>
-                            <option disabled selected></option>
+                        <select class="input" id="category" type="text" placeholder="Kategorie">
+                            <option hidden></option>
                             <option>Marketing</option>
                             <option>Development</option>
                             <option>Design</option>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="column2">
                         <b>Beschreibung</b>
-                        <textarea class="input" id="description" cols="30" rows="8" class="text" required></textarea>
+                        <textarea style="resize: none;" class="input" id="description" cols="30" rows="8" class="text" required></textarea>
                     </div>
                 </div>
 
@@ -57,8 +57,8 @@
                     </div>
                     <div class="column2">
                         <b>Dringlichkeit</b>
-                        <select class="input" id="ungency" placeholder="Dringlichkeit" required>
-                            <option disabled selected></option>
+                        <select class="input" id="ungency" required>
+                            <option hidden></option>
                             <option>Normal</option>
                             <option>Hoch</option>
                             <option>Sehr hoch</option>
@@ -67,7 +67,7 @@
                     <div class="column2">
                         <b>Zuteilen an</b>
                         <select class="input" id="assigned" placeholder="Zuteilen an" required>
-                            <option disabled selected></option>
+                            <option hidden></option>
                             <option>Andrea Böhme</option>
                             <option>Sebastian Schwill</option>
                             <option>Roland Vas</option>

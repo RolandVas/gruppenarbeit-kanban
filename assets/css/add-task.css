@@ -1,6 +1,7 @@
 .add-task {
     margin: 16px;
     margin-left: 200px;
+    margin-right: 50px;
     color: var(--clr-main);
 }
 
@@ -25,13 +26,14 @@
     background-color: rgb(238,242,255);
     display: flex;
     padding: 18px;
-    width: 700px;
+    width: 100%;
     border-radius: 15px;
 }
 
 
 
 .input {
+    max-width: 100%;
     padding: 6px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -45,6 +47,7 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    max-width: 100%;
 }
 
 .column2 {
@@ -75,5 +78,5 @@
 }
 
 .button button:hover {
-    background-color: #4343e7;
+    background-color: #5D5DEA;
 }

@@ -2,7 +2,7 @@
 /* Aktueller Zeit und Datum */
 let today = new Date();
 let time = ('0' + today.getHours()).slice(-2) + ':' + ('0' + today.getMinutes()).slice(-2);
-let date = today.getFullYear() + '.' + ('0' + (today.getMonth() + 1)).slice(-2) + '.' + ('0' + today.getDate()).slice(-2);
+let date = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
 
 
 let allTasks = [];
@@ -10,9 +10,6 @@ let allTasks = [];
 
 /* Wenn man auf dem Button Hinzufügen drückt werden alle eingegebene Werte ausgelesen und im Array allTasks gespeichert */
 function addTask() {
-    // var data = new FormData(document.getElementById("form"));
-    // fetch("SERVER-SCRIPT", { method: "post", body: data });
-
     let title = document.getElementById('title').value;
     let category = document.getElementById('category').value;
     let description = document.getElementById('description').value;
@@ -38,19 +35,17 @@ function addTask() {
 
     save();
     clearInput();
-    document.getElementById('Save').innerHTML += `
+    document.getElementById('Save').innerHTML = `
     <div class="task">
     Die Aufgabe wurde erfolgreich gespeichert!
     </div>`
-
-    
 }
 
+/* Leert alle Eingabefeldern */
 function clearInput() {
     title.value = '';
     category.value = '';
     description.value = '';
-    // due_date.value = '';
     document.getElementById('due-date').value = '';
     ungency.value = '';
     assigned.value = '';
