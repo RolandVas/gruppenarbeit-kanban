@@ -1,10 +1,18 @@
 let backlog = [];
 
+/**
+ * This function is to load the Array "allTasks" that contains all tasks added in add-task sheet
+ * 
+ */
 async function initBacklog() {
     await loadTasks();
     checkStatus();
 }
 
+/**
+ * This function is to filter the tasks in Array "allTasks" and address them the status "backlog"
+ * 
+ */
 function checkStatus() {
     if (allTasks.length != 0) {
         backlog = allTasks.filter((task) => task.status == "backlog");
@@ -12,6 +20,10 @@ function checkStatus() {
     updateBacklog(backlog);
 };
 
+/**
+ * This function is to generate the tasks in Array "allTasks" and show them in backlog sheet
+ * 
+ */
 function updateBacklog(backlog) {
     let backlogTasks = document.getElementById('backlogTasks');
     backlogTasks.innerHTML = ``;
@@ -38,7 +50,10 @@ function updateBacklog(backlog) {
     }
 };
 
-/* Teilt den Task farben zu */
+/**
+ * This function is to address colors to the tasks according to their urgency
+ * 
+ */
 function colors(backlog) {
     if (backlog[i]['ungency'] == 'Normal') {
         color = 'green';
@@ -52,18 +67,25 @@ function colors(backlog) {
     return color;
 }
 
- function addTaskToTodo(id) {
+/**
+ * This function is to move from "backlog" sheet to "board" sheet
+ * 
+ */
+function addTaskToTodo(id) {
     document.getElementById('backlogTasks').innerHTML = ``;
     for (i = 0; i < allTasks.length; i++) {
         if (allTasks[i]['id'] == id) {
             allTasks[i]['status'] = 'toDo';
         }
     }
-
     save();
     checkStatus();
 };
 
+/**
+ * This function is to delete the task definitively from "backlog" and consequently from Array "allTasks"
+ * 
+ */
 function deleteTaskFromJson(id) {
     document.getElementById('backlogTasks').innerHTML = ``;
     for (i = 0; i < allTasks.length; i++) {
@@ -72,5 +94,5 @@ function deleteTaskFromJson(id) {
         }
     }
     save();
-    checkStatus();
-};
+    checkStatus()
+} 
