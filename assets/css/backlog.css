@@ -38,7 +38,6 @@ button:hover {
     margin-top: 32px;
 }
 
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -49,7 +48,6 @@ table {
     font-size: 20px;
     text-align: left;    
 }
-
 
 .table-content {
     background-color: rgb(238,242,255);
@@ -75,7 +73,6 @@ td:hover {
     word-break: break-all;
 }
 
-
 td:nth-child(7) {
     text-align: end;
     max-width: 300px;
@@ -95,4 +92,36 @@ tr:nth-child(even){
 
 .yellow {
     border-left: solid 4px #E9D758;
+}
+
+@media(max-width: 1045px) {
+    
+    .backlog-container {
+        margin: 16px;
+        margin-left: 180px;
+        margin-right: 45px;
+    }
+
+    .table-head{
+        font-size: 16px;  
+    }
+    
+    .table-content {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 890px) {
+    
+    .backlog-container {
+        margin-left: 150px;
+        margin-right: 35px;
+    }
+}
+
+@media(max-width: 625px) {
+    
+    .backlog-container {
+        margin-left: 20px !important;
+    }
 }
