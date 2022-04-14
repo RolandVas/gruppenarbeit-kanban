@@ -94,5 +94,5 @@ function deleteTaskFromJson(id) {
         }
     }
     save();
-    checkStatus();
-};
+    checkStatus()
+} 
