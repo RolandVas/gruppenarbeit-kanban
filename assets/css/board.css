@@ -293,11 +293,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 }
 
-@media(max-width: 780px) {
+@media(max-width: 750px) {
     
     .statusOfTask {
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: column;
     }
     
@@ -305,9 +306,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         width: 550px;
         min-height: 300px;
     }
+
+    .bg {
+        display: flex;
+        justify-content: center;
+    }
+
+    .board-container {
+        margin: unset;
+    }
 }
 
-@media(max-width: 715px) {
+/* @media(max-width: 715px) {
     
     .status-item {
         width: 500px;
@@ -328,4 +338,4 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .board-container {
         margin-left: 20px !important;
     }
-}
+} */

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../assets/css/add-task.css">
 
     <script src="../assets/js/mini_backend.js"></script>
-    
+
     <script src="../assets/js/main.js"> </script>
     <script src="../assets/js/backlog.js"> </script>
     <script src="../assets/js/add-task.js"> </script>
@@ -21,9 +21,11 @@
 </head>
 
 <body onload="loadTasks(), includeHTML()">
+
+    <div w3-include-html="../views/nav.html"></div>
     <div class="bg">
 
-        <div w3-include-html="../views/nav.html"></div>
+        
 
         <div class="add-task">
 
@@ -31,7 +33,7 @@
 
             <form onsubmit="addTask(); return false" class="task-container">
 
-                <div class="column">
+                <div class="column1">
                     <div class="column2">
                         <b>Titel</b>
                         <input type="text" class="input" id="title" required>
@@ -47,11 +49,12 @@
                     </div>
                     <div class="column2">
                         <b>Beschreibung</b>
-                        <textarea style="resize: none;" class="input" id="description" cols="30" rows="8" class="text" required></textarea>
+                        <textarea style="resize: none;" class="input" id="description" cols="30" rows="8" class="text"
+                            required></textarea>
                     </div>
                 </div>
 
-                <div class="column">
+                <div class="column1">
                     <div class="column2">
                         <b>Bis zum</b>
                         <input class="input" type="date" name="Date" id="due-date" required>
@@ -77,12 +80,15 @@
                     <div class="button">
                         <button type="submit">In Backlog speichern</button>
                     </div>
-                    <div id="Save"></div>
+
+                    <div id="Save">
+                    </div>
+
                 </div>
-                
+
             </form>
 
-            
+
 
         </div>
     </div>

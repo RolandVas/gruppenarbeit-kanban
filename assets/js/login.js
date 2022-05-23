@@ -5,8 +5,7 @@ function login() {
     let password = document.getElementById('password').value;
 
     if (username == 'User' & password == '1234') {
-        // window.open("URL")
-        alert("login sucesfully")
+        window.location = 'https://www.google.de';
     } else {
         alert("login failed")
     }
