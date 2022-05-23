@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation</title>
 
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
@@ -16,6 +18,7 @@
     <link rel="stylesheet" href="../assets/css/nav.css">
 
     <script src="../assets/js/add-task.js"> </script>
+
     <script src="../assets/js/main.js"> </script>
     <script src="../assets/js/mini_backend.js"></script>
     <script src="../assets/js/board.js"> </script>
@@ -23,6 +26,7 @@
     <script src="../assets/js/help.js"> </script>
     <script src="../assets/js/imprint.js"> </script>
     <script>setURL('http://gruppe-186.developerakademie.net/smallest_backend_ever');</script>
+    <script src="../assets/js/toggle-button.js"></script>
 </head>
 
 <body>
@@ -30,14 +34,27 @@
     <aside class="navbar">
         <nav class="navigation">
             <div class="logo"><img src="../assets/img/logo.png"></div>
-            <div class="navigation-links">
+            
+            <div id="tgBtn">
+            <a onclick="menuOpen()"  href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            </div>
+
+                <div onclick="menuClose()" id="tgBtnClose" class="toggle-close d-none">
+                    <img src="../assets/img/close-w.png">
+                </div>
+
+
+            <div id="menulist" class="navigation-links">
                 <div class="links"><a href="../index.html">Board</a></div>
                 <div class="links"><a href="../views/backlog.html">Backlog</a></div>
                 <div class="links"><a href="../views/add-task.html">Add Task</a></div>
                 <div class="links"><a href="../views/help.html">Help</a></div>
                 <div class="links"><a href="../views/imprint.html">Imprint</a></div>
             </div>
-            <img src="../assets/img/profile.jpg" class="profile">
         </nav>
     </aside>
 

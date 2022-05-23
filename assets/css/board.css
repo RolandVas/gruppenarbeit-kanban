@@ -63,16 +63,18 @@ span {
 }
 
 .changeText {
-    position: absolute;
-    top: 50px;
-    left: 450px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 550px;
     height: 700px;
     border: 1px solid var(--clr-grey);
     background-color: var(--clr-main);
     border-radius: 10px;
     border-width: 2px;
-    padding: 10px;
+    margin: 24px;
     min-width: 200px;
     border-color: var(--clr-main);
     color: var(--clr-white);
@@ -86,10 +88,8 @@ span {
 }
 
 .inputfields {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    z-index: 1;
+    width: 90%;
+    padding: 16px;
     color: var(--clr-main);
 }
 
@@ -127,10 +127,6 @@ span {
 }
 
 .change-button {
-    position: absolute;
-    z-index: 1;
-    top: 600px;
-    left: 250px;
     justify-content: flex-end;
     align-items: center;
     text-align: center;
@@ -150,10 +146,8 @@ span {
 
 .close-button {
     position: absolute;
-    z-index: 1;
-    top: 10px;
-    left: 500px;
-    justify-content: flex-end;
+    top: -12px;
+    right: -12px;
     text-align: center;
     background-color: var(--clr-white);
     color: var(--clr-main);
@@ -179,6 +173,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-width: thin;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.8);
+}
+
+.change-div {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media(max-width: 1200px) {

@@ -126,7 +126,7 @@ function deleteTask(id) {
  */
 function editTask(id) {
     let index = allTasks.findIndex(t => t.id == id);
-    document.getElementById('board-container').innerHTML += `
+    document.getElementById('change-task').innerHTML += `
                         <div id="changeText" class="changeText">
                          
                                 <div class="close-button" onclick="closeOpenTask()">x</div> 
@@ -144,7 +144,7 @@ function editTask(id) {
                                     </select>
                                 </div>
                                 <div class="white-text">Beschreibung:
-                                    <textarea style="resize: none;" cols="28" rows="8" id="Description_${allTasks[index]['description']}" type="text">
+                                    <textarea style="width: 250px; resize: none;" cols="28" rows="8" id="Description_${allTasks[index]['description']}" type="text">
                                     </textarea>
                                 </div>
                                 <div class="white-text">Bis zum:
@@ -177,6 +177,7 @@ function editTask(id) {
     document.getElementById(`DueDate_${allTasks[index]['due-date']}`).value = allTasks[index]['due-date'];
     document.getElementById(`Ungency_${allTasks[index]['ungency']}`).value = allTasks[index]['ungency'];
     document.getElementById(`AssignedTo_${allTasks[index]['assigned']}`).value = allTasks[index]['assigned'];
+    document.getElementById('change-task').classList.remove('d-none');
 }
 
 /**
@@ -209,6 +210,7 @@ function changeInput(i, index, status, indexOfTitle, indexOfCategory, indexOfDes
     loadTasks();
     filterTasks();
     document.getElementById('changeText').remove();
+    document.getElementById('change-task').classList.add('d-none');
 }
 
 /**
@@ -217,4 +219,5 @@ function changeInput(i, index, status, indexOfTitle, indexOfCategory, indexOfDes
  */
 function closeOpenTask() {
     document.getElementById('changeText').remove();
+    document.getElementById('change-task').classList.add('d-none');
 }

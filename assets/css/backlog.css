@@ -61,19 +61,14 @@ th {
 
 td {
     padding: 8px;
-    max-width: 100px;
+    max-width: 150px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
-td:hover {
-    text-overflow: clip;
-    white-space: normal;
-    word-break: break-all;
-}
 
-td:nth-child(7) {
+
+td:last-child {
     text-align: end;
     max-width: 300px;
 }

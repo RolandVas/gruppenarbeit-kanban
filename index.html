@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanban</title>
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +17,19 @@
     <link rel="stylesheet" href="../assets/css/board.css">
 
     <script src="../assets/js/mini_backend.js"></script>
+    
     <script src="../assets/js/board.js"> </script>
     <script src="../assets/js/main.js"> </script>
     <script src="../assets/js/backlog.js"> </script>
     <script src="../assets/js/add-task.js"> </script>
     <script>setURL('http://gruppe-186.developerakademie.net/smallest_backend_ever');</script>
+    <script src="../assets/js/toggle-button.js"></script>
 
 </head>
 
 <body onload="initBoard(), includeHTML()" class="flex align-items-center">
-   <div> 
+  
+    <div> 
 
         <div w3-include-html="../views/nav.html"></div>
         <div id="board-container" class="board-container flex">
@@ -49,6 +53,13 @@
             </div>
         </div>
     </div> 
+
+    <div id="change-task" class="change-div d-none">
+
+    </div>
+
 </body>
+
+
 
 </html>

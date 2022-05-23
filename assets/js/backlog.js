@@ -33,7 +33,6 @@ function updateBacklog(backlog) {
 
             `<tr id="task${i}" class="table-content">
                 <td class='${color}'>${backlog[i]['title']}</th>
-                <td>${backlog[i]['description']}</th>
                 <td>${backlog[i]['category']}</th>
                 <td>${backlog[i]['ungency']}</th>
                 <td>${backlog[i]['createdDate']} ${backlog[i]['createdTime']}</th>
