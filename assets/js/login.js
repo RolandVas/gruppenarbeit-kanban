@@ -5,7 +5,7 @@ function login() {
     let password = document.getElementById('password').value;
 
     if (username == 'User' & password == '1234') {
-        window.location = 'https://www.google.de';
+        window.location = 'https://www.roland-vas.com/portfolio/kanbanprojekt/views/index.html';
     } else {
         alert("login failed")
     }
