@@ -38,8 +38,8 @@ function updateBacklog(backlog) {
                 <td>${backlog[i]['createdDate']} ${backlog[i]['createdTime']}</th>
                 <td>${backlog[i]['due-date']}</th>
                 <td>
-                    <button onclick="addTaskToTodo(${backlog[i]['id']})">In Board (TO DO)</button>
-                    <button onclick="deleteTaskFromJson(${backlog[i]['id']})">Löschen</button>
+                    <button onclick="addTaskToTodo(${backlog[i]['id']})">Add Task</button>
+                    <button onclick="deleteTaskFromJson(${backlog[i]['id']})">Delete</button>
                 </td>
             </tr>
         `;
@@ -56,9 +56,9 @@ function updateBacklog(backlog) {
 function colors(backlog) {
     if (backlog[i]['ungency'] == 'Normal') {
         color = 'green';
-    } else if (backlog[i]['ungency'] == 'Hoch') {
+    } else if (backlog[i]['ungency'] == 'High') {
         color = 'yellow';
-    } else if (backlog[i]['ungency'] == 'Sehr hoch') {
+    } else if (backlog[i]['ungency'] == 'Very high') {
         color = 'red';
     } else {
         color = 'green';

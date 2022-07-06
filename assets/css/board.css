@@ -300,10 +300,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        width: 100%;
+    }
+
+    .status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
     }
     
     .status-item {
-        width: 550px;
+        width: 80%;
         min-height: 300px;
     }
 
@@ -315,27 +324,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .board-container {
         margin: unset;
     }
-}
 
-/* @media(max-width: 715px) {
-    
-    .status-item {
-        width: 500px;
-        min-height: 250px;
+    .tasks {
+        width: 200px;
+        font-size: 1rem;
     }
 }
-
-@media(max-width: 660px) {
-    
-    .status-item {
-        width: 450px;
-        min-height: 200px;
-    }
-}
-
-@media(max-width: 625px) {
-    
-    .board-container {
-        margin-left: 20px !important;
-    }
-} */

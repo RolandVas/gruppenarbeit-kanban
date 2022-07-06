@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../assets/css/login.css">
 
 
-    
+
     <script src="../assets/js/mini_backend.js"></script>
     <script src="../assets/js/board.js"> </script>
     <script src="../assets/js/main.js"> </script>
@@ -26,7 +26,7 @@
     <script>setURL('https://www.roland-vas.com/portfolio/kanbanprojekt/smallest_backend_ever')</script>
     <script src="../assets/js/toggle-button.js"></script>
     <script src="../assets/js/login.js"></script>
-    
+
 </head>
 
 <body onload="initBacklog(), includeHTML()">
@@ -35,19 +35,23 @@
 
     <div class="backlog-container">
         <h2>Backlog</h2>
-        <table class="table">
-            <tbody>
-                <tr class="table-head">
-                    <th>Titel</th>
-                    <th>Kategorie</th>
-                    <th>Dringlichkeit</th>
-                    <th>Erstellt am</th>
-                    <th>Bis zu</th>
-                    <th></th>
-                </tr>
-            </tbody>
-            <tbody id="backlogTasks"></tbody>
-        </table>
+
+        <div class="overflow">
+            <table class="table">
+                <tbody>
+                    <tr class="table-head">
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Urgency</th>
+                        <th>Created</th>
+                        <th>Due date</th>
+                        <th></th>
+                    </tr>
+                </tbody>
+                <tbody id="backlogTasks"></tbody>
+            </table>
+        </div>
+
     </div>
 
 

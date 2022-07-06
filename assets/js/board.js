@@ -116,7 +116,6 @@ function deleteTask(id) {
         }
     }
     save();
-    loadTasks();
     filterTasks();
 }
 
@@ -132,10 +131,10 @@ function editTask(id) {
                                 <div class="close-button" onclick="closeOpenTask()">x</div> 
                          
                             <div class="inputfields">
-                                <div class="white-text">Titel: 
+                                <div class="white-text">Title: 
                                     <input minlength="2" maxlength="25" id="Title_${allTasks[index]['title']}" type="text">
                                 </div>
-                                <div class="white-text">Kategorie:
+                                <div class="white-text">Category:
                                     <select class="input" id="Category_${allTasks[index]['category']}">
                                         <option hidden></option>
                                         <option>Marketing</option>
@@ -143,22 +142,22 @@ function editTask(id) {
                                         <option>Design</option>
                                     </select>
                                 </div>
-                                <div class="white-text">Beschreibung:
+                                <div class="white-text">Description:
                                     <textarea style="width: 250px; resize: none;" cols="28" rows="8" id="Description_${allTasks[index]['description']}" type="text">
                                     </textarea>
                                 </div>
-                                <div class="white-text">Bis zum:
+                                <div class="white-text">Due date:
                                     <input type="date" name="Date" id="DueDate_${allTasks[index]['due-date']}">
                                 </div>
-                                <div class="white-text">Dringlichkeit:
+                                <div class="white-text">Urgency:
                                     <select class="input" id="Ungency_${allTasks[index]['ungency']}">
                                         <option hidden></option>
                                         <option>Normal</option>
-                                        <option>Hoch</option>
-                                        <option>Sehr hoch</option>
+                                        <option>High</option>
+                                        <option>Very high</option>
                                     </select>
                                 </div>
-                                <div class="white-text">Zuteilen an:
+                                <div class="white-text">Assign to:
                                     <select id="AssignedTo_${allTasks[index]['assigned']}">
                                         <option>Andrea Böhme</option>
                                         <option>Sebastian Schwill</option>
@@ -209,6 +208,7 @@ function changeInput(i, index, status, indexOfTitle, indexOfCategory, indexOfDes
     save();
     loadTasks();
     filterTasks();
+    updateBoard();
     document.getElementById('changeText').remove();
     document.getElementById('change-task').classList.add('d-none');
 }

@@ -7,3 +7,10 @@ h1{
     margin-left: 250px;
     color: var(--clr-main);
 }
+
+@media(max-width: 750px) {
+    
+    .imprint-container {
+        margin-left: 10%;
+    }
+}
