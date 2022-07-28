@@ -36,7 +36,7 @@ function addTask() {
     clearInput();
     document.getElementById('Save').innerHTML = `
     <div class="task">
-    Die Aufgabe wurde erfolgreich gespeichert!
+    The task was saved successfully!
     </div>`
     setTimeout
     setTimeout(() => {document.getElementById('Save').innerHTML = `

@@ -125,6 +125,7 @@ function deleteTask(id) {
  */
 function editTask(id) {
     let index = allTasks.findIndex(t => t.id == id);
+    document.getElementById('change-task').innerHTML = '';
     document.getElementById('change-task').innerHTML += `
                         <div id="changeText" class="changeText">
                          
@@ -183,7 +184,7 @@ function editTask(id) {
  * This function is to change the data in the Array "allTasks" according to the changes made in editTask function
  * 
  */
-function changeInput(i, index, status, indexOfTitle, indexOfCategory, indexOfDescription, time, date, indexOfDueDate, indexOfUngency, indexOfAssigned) {
+async function changeInput(i, index, status, indexOfTitle, indexOfCategory, indexOfDescription, time, date, indexOfDueDate, indexOfUngency, indexOfAssigned) {
     let id = parseInt(i);
     let title = document.getElementById(indexOfTitle).value;
     let category = document.getElementById(indexOfCategory).value;
@@ -205,10 +206,8 @@ function changeInput(i, index, status, indexOfTitle, indexOfCategory, indexOfDes
         'assigned': assigned
     }
     allTasks.splice(index, 1, task);
-    save();
-    loadTasks();
-    filterTasks();
-    updateBoard();
+    await save();
+    initBoard();
     document.getElementById('changeText').remove();
     document.getElementById('change-task').classList.add('d-none');
 }
